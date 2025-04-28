@@ -1,0 +1,20 @@
+{
+    "version": 2,
+    "builds": [
+        {
+            "src": "index.js",
+            "use": "@vercel/node"
+        }
+    ],
+    "routes": [
+        {
+            "src": "/(.*)",
+            "dest": "index.js"
+        }
+    ],
+    "env": {
+        "LINE_CHANNEL_SECRET": "@line_channel_secret",
+        "LINE_CHANNEL_ACCESS_TOKEN": "@line_channel_access_token",
+        "GEMINI_API_KEY": "@gemini_api_key"
+    }
+}
